@@ -1,0 +1,146 @@
+[
+    {
+        "id": "00",
+        "nombre": "Un pez gordo",
+        "descripcion": "Edward Bloom era un hombre extraordinario e inquieto. Recorría el mundo y sólo regresaba a su hogar de forma impredecible. Sin embargo, ahora ha vuelto para morir. Su hijo, William, siente una necesidad acuciante de conocerlo antes de que sea demasiado tarde y recrea la escurridiza vida de su padre en una serie de leyendas y mitos inspirados en el puñado de hechos que conoce de él. Nada había que éste no supiera hacer: corría como el viento, salvaba vidas, los animales lo adoraban, era un visionario y sabía más chistes que cualquier otro hombre. Así, William convierte a su enigmático padre en el paradigma de un héroe popular americano. En una serie de escenas dislocadamente humorísticas y muchas veces conmovedoras, Un Pez Gordo nos muestra la distancia que separa a padres e hijos:  'Es una novela refrescante y original... Wallace cuenta una historia circular, mundana y mítica a la vez, en la que se mezclan el humor, el heroísmo y el patetismo.' (Publisher's Weekly) 'Daniel Wallace... utiliza cuentos y leyendas del Sur de Estados Unidos, añade elementos de la mitología griega e inventa algunos de su propia cosecha. De este modo convierte una vida corriente en una historia a la vez cómica y conmovedora.' (The New York Times Book Review)",
+        "categoria": "libros",
+        "precio": 1500,
+        "disponible": true,
+        "img": "https://imagessl1.casadellibro.com/a/l/t5/01/9788432310201.jpg"
+    },
+    {
+        "id": "01",
+        "nombre": "El Gaucho Martín Fierro",
+        "descripcion": "El Gaucho Martín Fierro, es un poema narrativo escrito en verso y una obra literaria considerada ejemplar del género gauchesco, escrita por el poeta argentino José Hernández en 1872. Cuenta además con una continuación, titulada La vuelta de Martín Fierro, escrita en 1879; este último libro también es conocido como «La vuelta» y la primera parte, como «La ida». Tanto «La ida», como «La vuelta», han sido seleccionados como libros nacionales de Argentina, unidos bajo el título genérico de «El Martín Fierro».",
+        "categoria": "libros",
+        "precio": "4300",
+        "disponible": true,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/9/99/Martin_fierro_1894.jpg"
+    },
+    {
+        "id": "02",
+        "nombre": "Martillo",
+        "descripcion": "MARTILLO GALPONERO SACA CLAVO.",
+        "categoria": "herramientas",
+        "precio": "600",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1575908393823-8e6ee16403d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+    },
+    {
+        "id": "03",
+        "nombre": "Destornillador",
+        "descripcion": "- Punta magnética, ideal para trabajos rápidos y precisos. Punta fabricada con Acero Cromo Vanadium endurecida, no se lastima, no se arquea. - Mango Plástico de alta calidad, transparente con logotipo de la marca. - Permite aplicar alto torque sin dañar la punta ni el tornillo. - Soporta la exposición a la mayoría de los químicos.",
+        "categoria": "herramientas",
+        "precio": "100",
+        "disponible": false,
+        "img": "https://images.unsplash.com/photo-1581621293775-7aac902d7032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+    },
+    {
+        "id": "04",
+        "nombre": "Taladro Atornillador",
+        "descripcion": "- Voltaje nominal: 14,4Vcc - Velocidad en vacío: 0-400/0-1500rpm - Dimensiones: Altura 23.5cm / Ancho 7.5cm - Par máx.: 25Nm - Capacidad del mandril: 0,8 a 10mm - Configuración de par: 18+Perforación - No es Taladro Percutor",
+        "categoria": "herramientas",
+        "precio": "8000",
+        "disponible": false,
+        "img": "https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1143&q=80"
+    },
+    {
+        "id": "05",
+        "nombre": "Lego Super Heroes",
+        "descripcion": "Los jóvenes superhéroes podrán revivir la acción cinematográfica de la saga Marvel Vengadores con la Armadura Robótica de Iron Man LEGO® Marvel Vengadores (76140) articulada. Una vez que la minifigura de Iron Man entre en la armadura robótica blindada… ¡ningún villano estará a salvo! Un impresionante juguete de construcción para niños basado en Iron Man A los fans de la saga Marvel Vengadores les encantará la figura de la Armadura Robótica de Iron Man, rebosante de acción. La cabina de la armadura robótica se abre para sentar la minifigura de Iron Man dentro. Lleva acoplado un cañón que dispara por encima de la cabeza con el que rechaza cualquier amenaza, y los brazos y piernas articulados le aportan movilidad integral. Para divertirte aún más construyendo, descarga la app de construcción interactiva LEGO® Life gratuita. Acción al estilo Marvel con figuras LEGO de superhéroes Los juguetes de construcción LEGO Marvel Vengadores abren las puertas de un asombroso universo de juego de interpretación y aventuras. Con vehículos coleccionables, robots, edificios, minifiguras, armas y artefactos, los peques podrán recrear sus escenas cinematográficas favoritas e imaginar sus propias historias.",
+        "categoria": "juguetes",
+        "precio": "3000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+        "id": "06",
+        "nombre": "Peluche Gigante Oso",
+        "descripcion": "OSO PANDA 52 CM DE ALTO. Hermoso para todas las edades.",
+        "categoria": "juguetes",
+        "precio": "3000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1530325553241-4f6e7690cf36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+        "id": "07",
+        "nombre": "Lego Batman",
+        "descripcion": "Lego batimovil Modelo 70905 Otras características Personaje: Batimovil Franquicia: Super Héroes Cantidad de piezas: 581 Edad mínima recomendada - Edad máxima recomendada: 4 años - 99 años",
+        "categoria": "juguetes",
+        "precio": "18000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80"
+    },
+    {
+        "id": "08",
+        "nombre": "Mini drone DJI Mavic Mini Fly",
+        "descripcion": "Al infinito y más allá. Tu drone aéreo te permitirá ver absolutamente todo desde las alturas. Asegúrate de encontrar una plataforma de vuelo que te permita trabajar con comodidad y prepárate para volar.",
+        "categoria": "tecnologia",
+        "precio": "85000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1602526213372-376ca17a8e02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+        "id": "09",
+        "nombre": "Headset",
+        "descripcion": "En la calle, en el colectivo o en la oficina, tené siempre a mano tus auriculares AKG y ¡escapate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos cuando quieras y donde quieras.",
+        "categoria": "tecnologia",
+        "precio": "20000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+        "id": "09",
+        "nombre": "Headset",
+        "descripcion": "En la calle, en el colectivo o en la oficina, tené siempre a mano tus auriculares AKG y ¡escapate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos cuando quieras y donde quieras.",
+        "categoria": "tecnologia",
+        "precio": "20000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+        "id": "10",
+        "nombre": "Nueva Macbook Pro 2020 16 Touchbar I7 9na 6cores Ssd512 16gb",
+        "descripcion": "NEW MACBOOK PRO A2141 LATE 2019 ( COMERCIALMENTE 2020  ULTIMA VERSION QUE OFRECE EL FABRICANTE )16 TOUCHBAR INTEL CORE I7 9NA GENERACION 6 NUCLEOS SSD 512GB / 16 GB RAM / GRAN PLACA GRAFICA DEDICADA AMD RADEON PRO 5300 4GB DEDICADOS DDR6 / SILVER / TECLADO EN ESPAÑOL / ENTREGA INMEDIATA !!",
+        "categoria": "tecnologia",
+        "precio": "600000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+    },
+    {
+        "id": "11",
+        "nombre": "Joystick inalámbrico Sony Dualshock 4 magma red",
+        "descripcion": "Control preciso. Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Diseño inteligente Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort. Además, se destaca por su capacidad de detección de movimientos en un determinado espacio, que te permite una mayor interacción con la pantalla.",
+        "categoria": "tecnologia",
+        "precio": "11500",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1590845947376-2638caa89309?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+        "id": "12",
+        "nombre": "Reloj Smartwatch Apple Serie 3 Silver Mtey2ll/a 38mm",
+        "descripcion": "El reloj Apple Watch Serie 3 ofrece diversas funciones y facilidades para el día a día. Acompaña los signos vitales, latidos cardíacos, el gasto calórico, graba velocidad y distancias recorridas, etc. Es resistente al agua, adecuado para actividades de poca profundidad y baja velocidad. Con procesador Dual Core S3, Apple Chip W2 y sistema operativo WatchOS 4, es compatible con aplicaciones de monitoreo de salud, notificaciones y redes sociales, y los ejecuta con velocidad y buen desempeño.",
+        "categoria": "tecnologia",
+        "precio": "40000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
+    },
+    {
+        "id": "13",
+        "nombre": "Camara Go Pro Hero 7 Silver 4k Modelo 2018 Streaming Voz Pce",
+        "descripcion": "GO PRO HERO 7 SILVER. Vídeo 4K30. Da el salto a 4K. Graba vídeos nítidos en 4K, tan increíbles como el propio momento",
+        "categoria": "tecnologia",
+        "precio": "30000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1506731249430-5c2146c9db5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+    },
+    {
+        "id": "14",
+        "nombre": "Teclado gamer Redragon Kumara K552 QWERTY Cherry MX Blue español latinoamérica de color blanco con luz RGB",
+        "descripcion": "La gran calidad del Redragon Kumara K552, y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.",
+        "categoria": "tecnologia",
+        "precio": "9000",
+        "disponible": true,
+        "img": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80"
+    }
+]

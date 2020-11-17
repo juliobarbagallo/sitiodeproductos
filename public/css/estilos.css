@@ -1,7 +1,9 @@
 body{
-    background:lightblue;
+    background:#53D397;
 }
 
 #contenedor{
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }

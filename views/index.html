@@ -16,23 +16,22 @@
     {% include "header.html" %}
     <div id="contenedor">
         
+        <div class="row-cols-1 ">
 
-        <h1>Productos</h1> 
-
-        <ul>
-            {% for producto in productos %}
-                
-                <div class="card" style="width: 25rem; ">
-                    <img src="{{producto.img}}" class="card-img-top" alt="..." style="max-height: 1%; ">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="producto/{{producto.id}}">{{producto.nombre}}</a></h5>
-                        <p class="card-text">{{producto.precio}}</p>
-                        <a href="carrito/{{producto.id}}" class="btn btn-primary">Add to cart.</a>
+            <ul>
+                {% for producto in productos %}
+                    
+                    <div class="card border-success" style="width: 25rem; ">
+                        <img src="{{producto.img}}" class="card-img-top" alt="..." style="max-height: 1%; ">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="producto/{{producto.id}}">{{producto.nombre}}</a></h5>
+                            <p class="card-text">{{producto.precio}}</p>
+                            <a href="carrito/{{producto.id}}" class="btn btn-primary">Add to cart.</a>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        </ul>     
-        
+                {% endfor %}
+            </ul>     
+        </div>
     </div>            
     {% include "footer.html" %}
 

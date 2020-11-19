@@ -72,24 +72,13 @@ if (req.session.logeado === true){input = `<input type="submit" value="Ad to car
 res.render('producto.html', {ruta:ruta,input:input,productos:productos, id:req.params.id})})
 });
 
-<<<<<<< HEAD
+
 
 app.get('/categorias/:categoria', function(req, res) {
     fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
     .then(productos => res.render('categorias.html', {productos:productos, categoria:req.params.categoria}))
 });
-
-=======
-app.get('/buscar', function(req, res){
-    // Obtengo los names del formulario de búsqueda con req.query
-    res.send(`
-        <h1>Estás buscando sobre ${req.query.buscar} </h1>
-    `
-    )
-
-})
->>>>>>> 4addfca488cd7f236b92978a5a2c0195675be3cf
 
 
 app.listen(8080);

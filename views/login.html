@@ -15,15 +15,11 @@
 <body>
     {% include "header.html" %}
     <div id="contenedor">
-        {% for producto in productos %}
-        {% if producto.id == id %}
-            <p>Producto: {{producto.nombre}}</p>
-            <p>Categoria: {{producto.categoria}}</p>
-        <form action={{ruta}}>
-        {{input}}
-        </form>
-        {% endif %}
-        {% endfor %}
+        <form id="form"   name="formulario">
+            <input type="text" name="user" id='user' placeholder="Usuario..." required>
+            <input type="password"  name="pass" id='pass' placeholder="Password..." required>
+            <input type="button" value="Log">
+            </form>
     </div>
 {% include "footer.html" %}
 </body>

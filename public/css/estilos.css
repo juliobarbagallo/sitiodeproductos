@@ -7,3 +7,12 @@ body{
     display: flex;
     justify-content: center;
 }
+input{margin: 1%;}
+
+#buscar{
+    position: fixed; top: 62px; background-color: white; list-style: none; z-index: 4
+}
+
+@media (max-width: 990px){
+    #buscar{top: 180px;}
+}

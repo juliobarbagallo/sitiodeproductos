@@ -26,4 +26,14 @@ app.get('/producto/:id', function(req, res) {
     .then(productos => res.render('producto.html', {productos:productos, id:req.params.id}))
 });
 
+app.get('/buscar', function(req, res){
+    // Obtengo los names del formulario de búsqueda con req.query
+    res.send(`
+        <h1>Estás buscando sobre ${req.query.buscar} </h1>
+    `
+    )
+
+})
+
+
 app.listen(8080);

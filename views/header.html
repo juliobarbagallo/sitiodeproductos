@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,17 +18,19 @@
                     <div id="drop" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     </div>
                 </li>
-                <form class="form-inline">
+                <form class="form-inline" style="width: 40vw;">
                     <input style="width: 100%;" class="form-control" onkeyup="search(event)" type="search" placeholder="Search" aria-label="Search">
                     <ul id="buscar">
                     </ul>
                 </ul>
             </ul>
-            
-            <span><a href="/carrito"><img src="https://www.flaticon.es/svg/static/icons/svg/34/34627.svg" alt="carrito" width="30px"></a></span>
+        </form>
+            <span><a href="/carro"><img src="https://www.flaticon.es/svg/static/icons/svg/34/34627.svg" alt="carrito" width="30px"></a></span>
+            {% if log %}
+            <a style="margin: 1%;" href="/logout"><input class="btn btn-outline-success my-2 my-sm-0" type="button" value="Logout"></a>
+            {% else %}
             <a style="margin: 1%;" href="/login"><input class="btn btn-outline-success my-2 my-sm-0" type="button" value="Login"></a>
-            <input class="btn btn-outline-success my-2 my-sm-0" type="button" value="Logout">
-
+            {% endif %}
         </div>
 
     </nav>

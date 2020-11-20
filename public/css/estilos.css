@@ -7,7 +7,20 @@ body{
     display: flex;
     justify-content: center;
 }
+#cont{
+    margin: 0 auto;
+    text-align: center;
+}
+#cont h1{margin-top: 3%;}
+#cont form{
+width: 30%;
+margin: 5% auto;
+}
+#cont form input{display: block;margin: 3% auto; text-decoration: none;}
+#cont form a{text-decoration: none;}
 input{margin: 1%;}
+
+#cont ul{list-style: none;}
 
 #buscar{
     position: fixed; top: 62px; background-color: white; list-style: none; z-index: 4

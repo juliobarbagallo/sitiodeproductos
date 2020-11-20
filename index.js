@@ -2,10 +2,12 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const fetch = require('node-fetch');
-
+var bodyParser = require('body-parser');
 // Inicializamos express
 const app = express();
 // Declaramos public
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Declaramos la carpeta de las vistas de Nunjucks
@@ -25,51 +27,59 @@ app.use(session({
   cookie: { maxAge: 24 * 60 * 60 * 1000  }  
 }));
 
-var Allusers = function(req, res, next) {
-    if (req.session.logeado === 'ok')
-      return next();
-    else
-      return res.status(401).send(`Tu sesion expiró o No estas logeado. <a href="/">Home</a>`);
-  };
-
-app.get('/', function(req, res) {    
+app.get('/', function(req, res) {  
+  if (req.session.logeado && !req.session.carrito){
+    req.session.carrito =[]
+  }  
     fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
-    .then(productos => res.render('index.html', {productos:productos}))
+    .then(productos => res.render('index.html', {productos:productos,log:req.session.logeado}))
 });
 
-app.get('/carrito', Allusers, function(req, res) {    
-res.send('hola')    
+
+app.all('/carrito', function(req, res) {
+fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
+  .then(response => response.json())
+  .then(productos =>{
+if (req.session.logeado === true){
+for (producto of productos){ 
+if (req.body.id == producto.id){
+req.session.carrito.push(`<li>${producto.nombre} - $${producto.precio}</li>`)}}}
+res.render('carrito.html', {cart:req.session.carrito, log:req.session.logeado})})
 });
 
-app.get('/login', function(req, res) {
-var ref = ''
-var dato = ''
-/* 
+app.get('/carro', function(req, res) {    
+res.render('carrito.html', {log:req.session.logeado,cart:req.session.carrito})
+});
+
+app.all('/login', function(req, res) {
+var logeado = ''
 var datos = [{"user":"dami","password":"1234"},{"user":"coco","password":"1111"}]
 for (dato of datos){
 if ( req.body.user === dato.user && req.body.pass === dato.password){
-req.session.logeado === 'ok'}
-ref = '/' 
-dato = 'Entrar'}
- */
-res.render('login.html', {ref:ref,dato:dato})
-});    
+req.session.logeado = true;
+logeado = `<a href="/"><input class="btn btn-info my-2 my-sm-0" type="button" value="Volver a comprar"></a>`
+}}
+res.render('login.html', {logeado:logeado,log:req.session.logeado})
+});
 
-app.get('/login/:id', function(req, res) { 
-    var ref = `/producto/${req.params.id}` 
-    var dato = 'Entrar' 
-    res.render('login.html', {ref:ref,dato:dato})
-    });
+app.get('/logout', function (req, res) {
+  req.session.destroy();
+  var logout = `<h1>Sesión cerrada!</h1>`;
+  res.render('logout.html', {logout:logout})
+});
+
 
 app.get('/producto/:id', function(req, res) {
-var input = `<input type="submit" value="Ad to cart">`
-var ruta= `/login/${req.params.id}`
-    fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
+  if (req.session.logeado && !req.session.carrito){
+    req.session.carrito =[]
+  } 
+var input = `<a class="btn btn-info my-2 my-sm-0" href='/login'>Ad to cart</a>`
+fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
     .then(productos => {
-if (req.session.logeado === true){input = `<input type="submit" value="Ad to cart">`; ruta= `/login`}
-res.render('producto.html', {ruta:ruta,input:input,productos:productos, id:req.params.id})})
+if (req.session.logeado === true){input = `<input class="btn btn-info my-2 my-sm-0" type="submit" value="Ad to cart">`}
+res.render('producto.html', {input:input,productos:productos, id:req.params.id, log : req.session.logeado})})
 });
 
 
@@ -77,7 +87,7 @@ res.render('producto.html', {ruta:ruta,input:input,productos:productos, id:req.p
 app.get('/categorias/:categoria', function(req, res) {
     fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
-    .then(productos => res.render('categorias.html', {productos:productos, categoria:req.params.categoria}))
+    .then(productos => res.render('categorias.html', {productos:productos, categoria:req.params.categoria, log:req.session.logeado}))
 });
 
 

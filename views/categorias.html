@@ -13,14 +13,16 @@
 </head>
 <body>
     {% include "header.html" %}
-    <div>
+    <div style="margin: 3% 5%;">
     <h1>Categoria: {{categoria}}</h1>
     <h1><u>Productos</u></h1>
+    <ul style="list-style: none;">
         {% for producto in productos %}
         {% if producto.categoria == categoria %}
             <li><a href=/producto/{{producto.id}}>{{producto.nombre}}</a></p>
         {% endif %}
         {% endfor %}
+    </ul>
     </div>
 {% include "footer.html" %}
 </body>

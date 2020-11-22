@@ -8,12 +8,12 @@ const app = express();
 // Declaramos public
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+const path = require('path');
+app.use('/public', express.static(path.join(__dirname + '/public')));
 
-// Declaramos la carpeta de las vistas de Nunjucks
-nunjucks.configure('views', {
-    autoescape: false,
-    express: app
+nunjucks.configure(path.join(__dirname + '/views/'), {
+  autoescape: false,
+  express: app
 });
 
 session = require('express-session');
@@ -91,4 +91,7 @@ app.get('/categorias/:categoria', function(req, res) {
 });
 
 
-app.listen(8080);
+app.listen(8080, function(){
+
+  console.log("Iniciado en puerto 8080");
+});

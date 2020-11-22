@@ -16,7 +16,7 @@
     {% include "header.html" %}
     <div style="margin: 3% 5%;">
     <h1>Categoria: {{categoria}}</h1>
-    <h1><u>Productos</u></h1>
+    <h3><u>Productos</u></h3>
     <ul style="list-style: none;">
         {% for producto in productos %}
         {% if producto.categoria == categoria %}

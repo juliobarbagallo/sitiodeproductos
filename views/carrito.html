@@ -20,15 +20,16 @@
         {% if cart %}
         <ul>
         {% for producto in cart %}
-        {{producto}}
+            {{producto}}
         {% endfor %}
         </ul>
+        <p>Total: ${{ total }}</p>
         {% else %}
-        <h4>Carrito vacio!!!</h4>
+            <h4>Carrito vacio!!!</h4>
         {% endif %}
 
         {% else %}
-        <h1><u>Debe logearse primer</u></h1>
+        <h1><u>Debe logearse primero</u></h1>
         <form action="/login" method="POST" name="formulario">
         <input type="text" name="user" placeholder="Usuario..." required>
         <input type="password"  name="pass" placeholder="Password..." required>

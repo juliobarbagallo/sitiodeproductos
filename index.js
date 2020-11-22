@@ -29,7 +29,8 @@ app.use(session({
 
 app.get('/', function(req, res) {  
   if (req.session.logeado && !req.session.carrito){
-    req.session.carrito =[]
+    req.session.carrito =[];
+    req.session.total = 0;
   }  
     fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
@@ -42,10 +43,14 @@ fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master
   .then(response => response.json())
   .then(productos =>{
 if (req.session.logeado === true){
-for (producto of productos){ 
-if (req.body.id == producto.id){
-req.session.carrito.push(`<li>${producto.nombre} - $${producto.precio}</li>`)}}}
-res.render('carrito.html', {cart:req.session.carrito, log:req.session.logeado})})
+  for (producto of productos){ 
+    if (req.body.id == producto.id){
+      req.session.carrito.push(`<li>${producto.nombre} - $${producto.precio}</li>`);
+      req.session.total += producto.precio;
+    }
+  }
+}
+  res.render('carrito.html', {total:req.session.total, cart:req.session.carrito, log:req.session.logeado})})
 });
 
 app.get('/carro', function(req, res) {    
@@ -74,11 +79,11 @@ app.get('/producto/:id', function(req, res) {
   if (req.session.logeado && !req.session.carrito){
     req.session.carrito =[]
   } 
-var input = `<a class="btn btn-info my-2 my-sm-0" href='/login'>Ad to cart</a>`
+var input = `<a class="btn btn-info my-2 my-sm-0" href='/login'>Add to cart</a>`
 fetch('https://raw.githubusercontent.com/juliobarbagallo/sitiodeproductos/master/data/productos.json')
     .then(response => response.json())
     .then(productos => {
-if (req.session.logeado === true){input = `<input class="btn btn-info my-2 my-sm-0" type="submit" value="Ad to cart">`}
+if (req.session.logeado === true){input = `<input class="btn btn-info my-2 my-sm-0" type="submit" value="Add to cart">`}
 res.render('producto.html', {input:input,productos:productos, id:req.params.id, log : req.session.logeado})})
 });
 

@@ -25,7 +25,8 @@
                         <img src="{{producto.img}}" class="card-img-top" alt="..." style="max-height: 1%; ">
                         <div class="card-body">
                             <h5 class="card-title"><a href="producto/{{producto.id}}">{{producto.nombre}}</a></h5>
-                            <p class="card-text">{{producto.precio}}</p>
+                            <p>{{ producto.descripcion.slice(0,80) }}...</p>
+                            <p class="card-text">${{producto.precio}}</p>
                             <a href="producto/{{producto.id}}" class="btn btn-primary">Ir al producto</a>
                         </div>
                     </div>
